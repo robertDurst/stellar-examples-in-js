@@ -2,7 +2,7 @@ var StellarSdk = require('stellar-sdk')
 StellarSdk.Network.useTestNetwork();
 var server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
 
-const addPreAuthSigner = async (val, secretKey) => {
+const addPreAuthSigner = async (secretKey) => {
     try {
         var keypair = StellarSdk.Keypair.fromSecret(secretKey);
 
